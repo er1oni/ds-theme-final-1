@@ -12,18 +12,19 @@
             <section class="top-bar">
                 <div class="container">
                     <div class="logo">
-                        <?php
+                        <?php 
                         if( has_custom_logo() ){
                             the_custom_logo();
                         }else{
                             ?>
-                                <a href="<?php echo home_url( '/' ) ?>" <span><?php bloginfo( 'name' );?></span></a>
+                                <a href="<?php echo home_url( '/' ); ?>"><span><?php bloginfo( 'name' ); ?></span></a>
                             <?php
                         }
                         ?>
                     </div>
                     <div class="searchbox">
-                        Search
+                        <?php get_search_form(); ?>
+                        
                     </div>                    
                 </div>
             </section>
@@ -33,6 +34,7 @@
                         <button class="check-button">
                             <div class="menu-icon">
                                 <div class="bar1"></div>
+ ;
                                 <div class="bar2"></div>
                                 <div class="bar3"></div>
                             </div>
