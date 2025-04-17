@@ -7,6 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<<<<<<< HEAD
     <div id="page" class="site">
         <header>
             <section class="top-bar">
@@ -44,3 +45,39 @@
                 </div>
             </section>
         </header>
+=======
+
+
+<header>
+    <section class="top-bar">
+        <div class="logo">
+            <?php 
+            if(has_custom_logo() ){
+                the_custom_logo();
+            }else{
+                ?>
+                 <a href="<?php echo home_url( '/') ?>" <span><?php bloginfo (' name ') ?>  </span></a>
+                <?php
+            }
+             ?>
+        </div>
+        <div class="searchbox">
+            Search Box
+        </div>
+    </section>    
+    <section class="menu-area">
+        <nav class="main-menu">
+            <button class="check-button">
+                <div class="menu-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+           <?php wp_nav_menu(
+            array('theme-location' => 'wp_devs_main_menu', 'depth' => 2)
+           ); ?>
+        </nav>
+    </section>
+</header>
+>>>>>>> b3b77b27b646aa4ecdffedf157de89685a4b9980
