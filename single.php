@@ -7,6 +7,7 @@
             <?php 
             while( have_posts() ):
                 the_post();
+                get_template_part('parts/content', 'single');
                 ?>
                 <article id="post-<?php the_ID();?>" <?php post_class(); ?>>
                     
