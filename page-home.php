@@ -2,8 +2,17 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    <section class="hero">
-                        Hero
+                    <section class="hero" style="">
+                        <div class="overlay" style="min_height: 800px">
+                            <div class="container">
+                                <div class="hero-items">
+                                    <h1>Lorem, ipsum dolor.</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, dolores.</p>
+                                    <a href="#">learn more</a>
+                                </div>
+                            </div>
+
+                        </div>
                     </section>
                     <section class="services">
                         <h2>Services</h2>
