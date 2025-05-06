@@ -10,10 +10,19 @@ function wpdevs_load_scripts(){
 add_action( 'wp_enqueue_scripts', 'wpdevs_load_scripts' );
 
 function wpdevs_config(){
+
+    $textdoamin = 'wp-dewvs';
+    load_theme_textdoamin( $textdoamin, get_template_directory() . '/languages/');
+
     register_nav_menus(
         array(
-            'wp_devs_main_menu' => 'Main Menu',
-            'wp_devs_footer_menu' => 'Footer Menu'
+            register_nav_menus(
+                array(
+                    'wp_devs_main_menu' => esc_html__( 'Main Menu', 'wp-devs' ),
+                    'wp_devs_footer_menu' => esc_html__( 'Footer Menu', 'wp-devs' )
+                )
+            );
+            
         )
     );
 
@@ -47,7 +56,7 @@ function wpdevs_sidebars(){
     );
     register_sidebar(
         array(
-            'name'  => 'Service 1',
+            'name'  => esc_html__('Service 1', 'wp-devs'),
             'id'    => 'services-1',
             'description'   => 'First Service Area',
             'before_widget' => '<div class="widget-wrapper">',
@@ -58,7 +67,7 @@ function wpdevs_sidebars(){
     );
     register_sidebar(
         array(
-            'name'  => 'Service 2',
+            'name'  => esc_html__('Service 2',, 'wp-devs'),
             'id'    => 'services-2',
             'description'   => 'Second Service Area',
             'before_widget' => '<div class="widget-wrapper">',
@@ -69,7 +78,7 @@ function wpdevs_sidebars(){
     );
     register_sidebar(
         array(
-            'name'  => 'Service 3',
+            'name'  => esc_html__('Service 3',, 'wp-devs'),
             'id'    => 'services-3',
             'description'   => 'Third Service Area',
             'before_widget' => '<div class="widget-wrapper">',

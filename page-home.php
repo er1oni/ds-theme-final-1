@@ -2,6 +2,18 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
+                <?php
+                $hero_subtitle = get_theme_mod('set_hero_subtitle', 'Please, type some subtitle');
+                $hero_button_link = get_theme_mod('set_hero_button_link', '#');
+                $hero_button_text = get_theme_mod('set_hero_button_text', 'Learn More');
+                $hero_height = get_theme_mod('set_hero_heigh', '');
+                $hero_height = get_theme_mod('set_hero_heigh', 800);
+                $hero_background = wp_get_attachment_url(get_theme_mod('set_hero_background'));
+
+                ?>
+
+
+                    .
                     <section class="hero" style="">
                         <div class="overlay" style="min_height: 800px">
                             <div class="container">
@@ -15,7 +27,7 @@
                         </div>
                     </section>
                     <section class="services">
-                        <h2>Services</h2>
+                        <h2><<?php esc_html_e('Services' 'wp-devs') ?></h2>
                         <div class="container">
                             <div class="services-item">
                                 <?php 
